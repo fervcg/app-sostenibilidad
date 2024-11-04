@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; script-src 'self' 'unsafe-inline'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        <title>Prácticas Sostenibles</title>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </head>
+    <header>
+        <h1>Prácticas Sostenibles <img class="logo" src="/img/trebol.png" alt="logo de app"></h1>
+        <p>Adopta un estilo de vida sustentable y mide tu impacto positivo en el medio ambiente</p>
+    </header>
+    <body>
+ <!-- Registro de Actividades -->
+ <section id="registro-actividades">
+    <h2>Registro de Actividades Sostenibles</h2>
+    <select id="actividad-diaria">
+        <option value="reciclaje">Reciclaje</option>
+        <option value="uso-transporte-publico">Uso de Transporte Público</option>
+        <option value="reducir-plastico">Reducir Uso de Plástico</option>
+    </select>
+    <button onclick="registrarActividad()">Registrar Actividad</button>
+
+    <h3>Total de puntos: <span id="total-puntos">0</span></h3>
+
+    <table id="tabla-actividades" border="1">
+        <tr>
+            <th>Fecha</th>
+            <th>Actividad</th>
+            <th>Puntos</th>
+            <th>Acción</th>
+        </tr>
+    </table>
+</section>
+
+<!-- Calculadora de Impacto -->
+<section id="calculadora-impacto">
+    <h2>Calculadora de Impacto</h2>
+    <select id="periodo-impacto" onchange="calcularImpacto(this.value)">
+        <option value="todos">Todos</option>
+        <option value="semanal">Última Semana</option>
+        <option value="mensual">Último Mes</option>
+    </select>
+    <pre id="resultado-impacto">
+        Puntos acumulados en el periodo (todos): 0 
+        \nHuella de Carbono reducida: 0 kg 
+        \nHuella de Agua ahorrada: 0 litros 
+        \nConsumo reducido: 0 kWh
+    </pre>
+</section>
+<section id="beneficios-ambientales"> 
+    <h2>Beneficios de Realizar Prácticas Sostenibles</h2> 
+    <p>Llevar un estilo de vida sostenible tiene múltiples beneficios tanto para el planeta como para nosotros mismos. Aquí te mencionamos algunos:</p> 
+    <h3>Reciclar</h3> 
+    <p>Reciclar ayuda a reducir la cantidad de residuos que terminan en los vertederos, conservando recursos naturales y reduciendo la contaminación del aire y del agua.</p> 
+    <h3>Uso de Transporte Público</h3> 
+    <p>Utilizar el transporte público reduce las emisiones de gases de efecto invernadero, disminuye la congestión del tráfico y contribuye a un aire más limpio.</p> 
+    <h3>Reducir el Uso de Plástico</h3> 
+    <p>Reducir el uso de plásticos disminuye la contaminación de los océanos, protege la vida marina y promueve el uso de materiales más sostenibles.</p> 
+</section>
+
+<footer class="footer">
+    <p> ® Desarrollado por Fernanda Campos Guerrero (2024)</p> 
+</footer>
+    </body>
+</html>
